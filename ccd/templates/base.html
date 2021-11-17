@@ -360,30 +360,30 @@ mark { background-color:#fff; color:black; }
           <li><a href="{{ url_for('links') }}">Links</a></li>
         </ul>
       </div>
-    <div class="navbar topmenu" > 
+    <div class="navbar topmenu" >
 
     <ul>
-       
+
     <li><a class = "menu-link" href="{{ url_for("main") }}"  >Home</a> </li>
-  
+
     <div class="vertical-line w3-dropdown-hover"> </div>
-    
+
     <div class="dropdown" >
       <li>
         <button class="dropbtn"   >Participants</button>
 
         <div class="dropdown-content">
           <ul>
-            
+
             <li><a href="{{ url_for("research_team") }}" class="">Research Team</a></li>
             <li><a href="{{ url_for("roc_member") }}" class="">ROC members</a></li>
             <li><a href="{{ url_for("management_team") }}" class="">Management Team</a></li>
-            
+
           </ul>
         </div>
       </li>
     </div>
-    
+
       <div class="vertical-line w3-dropdown-hover"> </div>
 
       <div class="dropdown">
@@ -403,10 +403,10 @@ mark { background-color:#fff; color:black; }
       </div>
 
 
-      <div class="vertical-line w3-dropdown-hover"> </div>
+ <!--     <div class="vertical-line w3-dropdown-hover"> </div>
 
       <li><a class = "menu-link" href="{{ url_for("Progress") }}">Progress</a> </li>
-      
+
       <div class="vertical-line w3-dropdown-hover"> </div>
 
       <div class="dropdown">
@@ -441,17 +441,17 @@ mark { background-color:#fff; color:black; }
       <div class="vertical-line w3-dropdown-hover"> </div>
     <li><a class = "menu-link" href="{{ url_for("data_archive") }}">Data Archive</a> </li>
       <div class="vertical-line w3-dropdown-hover"> </div>
-      
-    <li><a class = "menu-link" href="{{ url_for("links") }}">Links</a></li>
 
-    
-      {% if session.logged_in %}
-    <li style = "float:right;"><a class = "menu-link" href="{{ url_for("logout") }}" class="w3-right "><b>Log Out</b></a></li>
-    
-      {% else %}
-    <li style = "float:right;"><a class = "menu-link" href="{{ url_for("login") }}" class="w3-right "><b>Log In</b></a></li>
-    
-      {% endif %}
+    <li><a class = "menu-link" href="{{ url_for("links") }}">Links</a></li>
+-->
+<!--    -->
+<!--      {% if session.logged_in %}-->
+<!--    <li style = "float:right;"><a class = "menu-link" href="{{ url_for("logout") }}" class="w3-right "><b>Log Out</b></a></li>-->
+<!--    -->
+<!--      {% else %}-->
+<!--    <li style = "float:right;"><a class = "menu-link" href="{{ url_for("login") }}" class="w3-right "><b>Log In</b></a></li>-->
+<!--    -->
+<!--      {% endif %}-->
 <!--
       <div class="vertical-line w3-dropdown-hover w3-right"> </div>
 
