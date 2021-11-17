@@ -321,6 +321,18 @@ mark { background-color:#fff; color:black; }
     <div style="background-color: rgb(255, 255, 255); padding-bottom: 1px;">
       
   </div>
+      <div class"stellarnav">
+        <ul>
+          <li><a href="{{ url_for("main") }}">Home</a></li>
+          <li><a href="">Participants</a>
+            <ul>
+              <li><a href="{{ url_for("research_team") }}">Research Team</a></li>
+              <li><a href="{{ url_for("roc_member") }}">ROC members</a></li>
+              <li><a href="{{ url_for("management_team") }}">Management Team</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     <div class="navbar topmenu" > 
 
     <ul>
@@ -350,7 +362,7 @@ mark { background-color:#fff; color:black; }
       <div class="dropdown">
         <li>
         <button class="dropbtn  "> Activities</button>
-        <div class="stellarnav">
+        <div class="dropdown-content">
         <ul>
         <li><a href="{{ url_for("activity_overview") }}">Overview</a></li>
         <li><a href="{{ url_for("activity1") }}">Activity 1: Harnessing Diversity</a></li>
