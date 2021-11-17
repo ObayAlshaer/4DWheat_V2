@@ -13,10 +13,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="all" href="css/stellarnav.min.css">
 
 <!-- JS -->
 <script src="{{ url_for('static', filename='js/jquery-1.12.4.js') }}"></script>
 <script src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/stellarnav.js') }}"></script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		jQuery('.stellarnav').stellarNav();
+	});
+</script>
+
 </head>
 
 
@@ -341,7 +350,7 @@ mark { background-color:#fff; color:black; }
       <div class="dropdown">
         <li>
         <button class="dropbtn  "> Activities</button>
-        <div class="dropdown-content">
+        <div class="stellarnav">
         <ul>
         <li><a href="{{ url_for("activity_overview") }}">Overview</a></li>
         <li><a href="{{ url_for("activity1") }}">Activity 1: Harnessing Diversity</a></li>
