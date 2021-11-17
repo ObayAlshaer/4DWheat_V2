@@ -85,11 +85,12 @@ a:link { text-decoration: none;}
 }
 
 .navbar {
-  height: 33px;
-  overflow: hidden;
+  display: none;
+  position: absolute;
   background-color: rgb(8, 97, 12);
   box-shadow: 0 2px 2px -2px blue;
   font-family: 'Roboto Condensed', sans-serif;
+  z-index: 1
 }
 
 .navbar a {
@@ -306,7 +307,7 @@ mark { background-color:#fff; color:black; }
                 </div>
                 <div style="background-color: rgb(255, 255, 255); padding-bottom: 1px;">
                 </div>
-                <div class="stellarnav" style="height: 300px">
+                <div class="stellarnav navbar">
                     <ul>
                         <li><a href="{{ url_for('main') }}">Home</a></li>
                         <li><a href="#">Participants</a>
