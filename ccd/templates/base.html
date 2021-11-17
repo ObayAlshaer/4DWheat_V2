@@ -85,7 +85,6 @@ a:link { text-decoration: none;}
 }
 
 .navbar {
-  display: none;
   position: absolute;
   background-color: rgb(8, 97, 12);
   box-shadow: 0 2px 2px -2px blue;
@@ -307,7 +306,7 @@ mark { background-color:#fff; color:black; }
                 </div>
                 <div style="background-color: rgb(255, 255, 255); padding-bottom: 1px;">
                 </div>
-                <div class="stellarnav navbar">
+                <div class="stellarnav dropdown">
                     <ul>
                         <li><a href="{{ url_for('main') }}">Home</a></li>
                         <li><a href="#">Participants</a>
