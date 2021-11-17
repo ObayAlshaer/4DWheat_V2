@@ -13,8 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all"
-          href="{{ url_for('static', filename='css/stellarnav.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stellarnav.min.css') }}">
 
     <!-- JS -->
     <script src="{{ url_for('static', filename='js/jquery-1.12.4.js') }}"></script>
@@ -306,7 +305,7 @@ mark { background-color:#fff; color:black; }
                 </div>
                 <div style="background-color: rgb(255, 255, 255); padding-bottom: 1px;">
                 </div>
-                <div class="stellarnav dropdown">
+                <div class="stellarnav">
                     <ul>
                         <li><a href="{{ url_for('main') }}">Home</a></li>
                         <li><a href="#">Participants</a>
