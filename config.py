@@ -3,8 +3,8 @@
 CONFIG                                                                          
 '''
 
-SQLALCHEMY_DATABASE_URI = 'mysql://root:Xyh@1999@localhost/ccd?charset=utf8'
-#SQLALCHEMY_DATABASE_URI = 'mysql://root:!QAZ2wsx@localhost/ccd?charset=utf8'
+#SQLALCHEMY_DATABASE_URI = 'mysql://root:Xyh@1999@localhost/ccd?charset=utf8'
+SQLALCHEMY_DATABASE_URI = 'mysql://root:!QAZ2wsx@localhost/ccd?charset=utf8'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 SQLALCHEMY_ECHO = False
 
