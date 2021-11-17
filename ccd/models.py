@@ -257,7 +257,7 @@ class Milestones(db.Model):
         milestone = db.Column(db.String(1000))
         assigned_to = db.Column(db.String(1000))
         progress = db.Column(db.String(1000))
-	variance = db.Column(db.String(1000))
+        variance = db.Column(db.String(1000))
 
         def __repr__(self):
                 return '<Milestones %r>' % self.milestones
