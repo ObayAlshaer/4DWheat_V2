@@ -10,7 +10,9 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.dataTables.min.css') }}">
-<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
 
 <!-- JS -->
 <script src="{{ url_for('static', filename='js/jquery-1.12.4.js') }}"></script>
@@ -72,8 +74,7 @@ a img:hover{
 a:link { text-decoration: none;}
 .navbar {
   font-family: 'Roboto Condensed';
-  src: url(https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-1967DRs5.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
+    unicode-range: U+1F00-1FFF;
 }
 
 .navbar {
@@ -82,7 +83,6 @@ a:link { text-decoration: none;}
   background-color: rgb(8, 97, 12);
   box-shadow: 0 2px 2px -2px blue;
   font-family: 'Roboto Condensed', sans-serif;
-  src: url(https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-1967DRs5.woff2) format('woff2');
 }
 
 .navbar a {
@@ -157,7 +157,6 @@ mark { background-color:#fff; color:black; }
 .footer { 
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
-    src: url(https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-1967DRs5.woff2) format('woff2');
     background-color: #fff;
     position: absolute; 
     left: 0 ; right: 0; bottom: 0; 
