@@ -26,6 +26,8 @@
 		jQuery('.stellarnav').stellarNav();
 	});
 
+
+
     </script>
 
 </head>
@@ -246,6 +248,8 @@ mark { background-color:#fff; color:black; }
  
 
 
+
+
 </style>
 
 
@@ -279,6 +283,8 @@ mark { background-color:#fff; color:black; }
     document.getElementById('page-container').style.height = heightNeeded +'px';
 　　} 
 
+
+
 </script>
 
 
@@ -289,27 +295,29 @@ mark { background-color:#fff; color:black; }
     <!-- Navbar (sit on top) -->
 
     <div id="page-container" style="padding-bottom: 266px; ">
-
         <div>
-            <!--<div class="w3-bar" style = "box-shadow: 0 2px 1px 3px  rgb(198, 244, 255);">-->
             <div class="w3-bar">
                 <div class="banner">
                     <div>
                         <div style="color: #fff;">
                             <a href="{{ url_for('main') }}">
-                              <img alt="4dwheat_logo" src="{{url_for('static',filename='images/4dwheat_modern.png')}}" class="responsive" style="height:80px;width:auto; clear:left;"/>
+                                <img alt="4dwheat_logo" src="{{url_for('static',filename='images/4dwheat_modern.png')}}"
+                                     class="responsive" style="height:80px;width:auto; clear:left;"/>
                             </a>
                             <a href="https://www.genomecanada.ca/en/4dwheat-diversity-discovery-design-and-delivery">
-                                <img alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}" class="responsive" style="height:68px;width:120px; float: right"/>
+                                <img alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}"
+                                     class="responsive" style="height:68px;width:120px; float: right"/>
                             </a>
-                            <br />
-<!--                            <span style="color:rgb(163, 255, 149);">-->
-                              <p style="text-align: right;padding-left: 150px; font-size: 16px; color:rgb(17, 129, 221)">2018 Large-Scale Applied Research Project Competition (2019-2024)</p>
-<!--                            </span>-->
-                            <br />
-<!--                            <span class="ban2" style="color:rgb(163, 255, 149)" >-->
-                              <p style="text-align: center;padding-left: 20px; font-size: 17px; color :rgb(9, 110, 26)">A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES</p>
-<!--                            </span>-->
+                            <br/>
+                            <!--                            <span style="color:rgb(163, 255, 149);">-->
+                            <p style="text-align: right;padding-left: 150px; font-size: 16px; color:rgb(17, 129, 221)">
+                                2018 Large-Scale Applied Research Project Competition (2019-2024)</p>
+                            <!--                            </span>-->
+                            <br/>
+                            <!--                            <span class="ban2" style="color:rgb(163, 255, 149)" >-->
+                            <p style="text-align: center;padding-left: 20px; font-size: 17px; color :rgb(9, 110, 26)">A
+                                GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES</p>
+                            <!--                            </span>-->
                         </div>
                     </div>
                 </div>
@@ -353,26 +361,20 @@ mark { background-color:#fff; color:black; }
                         <li><a href="{{ url_for('links') }}">Links</a></li>
                     </ul>
                 </div>
-              </div>
-              <div style="background-color: rgb(255, 255, 255); padding-bottom: 3px;">
-              </div>
-            </div><!--card-->
-        </div><!--top-->
+            </div>
+        </div><!--card-->
+    </div><!--top-->
 
-        <!-- Page content -->
+    <!-- Page content -->
 
 
-        {% block content %}
-        {% endblock %}
-
-
-    </div>
+    {% block content %}
+    {% endblock %}
 
 
     <div>
         <footer class="text-center" id="ft">
             <div class="container-fluid gradient">
-                <!--<div id ="fot" class="container footer"  style="background: linear-gradient(88deg, rgb(253, 255, 253),  rgb(163, 255, 149)); padding-top: 10px; padding-bottom: 0px;" >-->
                 <div id="fot" class="container footer"
                      style="background-color: #d1ebc7; padding-top: 5px; padding-bottom: 0px;">
                     <div>
@@ -472,8 +474,7 @@ mark { background-color:#fff; color:black; }
                 </div>
             </div>
         </footer>
-
-
     </div>
+</div>
 </body>
 </html>
