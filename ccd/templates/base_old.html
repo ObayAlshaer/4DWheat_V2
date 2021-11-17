@@ -316,7 +316,7 @@ mark { background-color:#fff; color:black; }
 
                     <ul>
 
-                        <li><a class="menu-link" href="{{ url_for(" main") }}" >Home</a> </li>
+                        <li><a class="menu-link" href="{{ url_for('main') }}" >Home</a> </li>
 
                         <div class="vertical-line w3-dropdown-hover"></div>
 
@@ -327,9 +327,9 @@ mark { background-color:#fff; color:black; }
                                 <div class="dropdown-content">
                                     <ul>
 
-                                        <li><a href="{{ url_for(" research_team") }}" class="">Research Team</a></li>
-                                        <li><a href="{{ url_for(" roc_member") }}" class="">ROC members</a></li>
-                                        <li><a href="{{ url_for(" management_team") }}" class="">Management Team</a>
+                                        <li><a href="{{ url_for('research_team') }}" class="">Research Team</a></li>
+                                        <li><a href="{{ url_for('roc_member') }}" class="">ROC members</a></li>
+                                        <li><a href="{{ url_for('management_team') }}" class="">Management Team</a>
                                         </li>
 
                                     </ul>
@@ -344,16 +344,16 @@ mark { background-color:#fff; color:black; }
                                 <button class="dropbtn  "> Activities</button>
                                 <div class="dropdown-content">
                                     <ul>
-                                        <li><a href="{{ url_for(" activity_overview") }}">Overview</a></li>
-                                        <li><a href="{{ url_for(" activity1") }}">Activity 1: Harnessing Diversity</a>
+                                        <li><a href='{{ url_for('activity_overview') }}">Overview</a></li>
+                                        <li><a href='{{ url_for('activity1') }}">Activity 1: Harnessing Diversity</a>
                                         </li>
-                                        <li><a href="{{ url_for(" activity2") }}">Activity 2: Advancing
+                                        <li><a href='{{ url_for('activity2') }}">Activity 2: Advancing
                                             Domestication</a></li>
-                                        <li><a href="{{ url_for(" activity3") }}">Activity 3: Enabling Discovery</a>
+                                        <li><a href='{{ url_for('activity3') }}">Activity 3: Enabling Discovery</a>
                                         </li>
-                                        <li><a href="{{ url_for(" activity4") }}">Activity 4: Expediting Delivery</a>
-                                        </li>
-                                        <li><a href="{{ url_for(" activity5") }}">Activity 5: Valuating Diversity</a>
+                                        <li><a href='{{ url_for('activity4') }}">Activity 4: Expediting Delivery</a>
+                                        </li>'
+                                        <li><a href='{{ url_for('activity5') }}">Activity 5: Valuating Diversity</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -363,7 +363,7 @@ mark { background-color:#fff; color:black; }
 
                         <div class="vertical-line w3-dropdown-hover"></div>
 
-                        <li><a class="menu-link" href="{{ url_for(" Progress") }}">Progress</a> </li>
+                        <li><a class="menu-link" href='{{ url_for('Progress') }}">Progress</a> </li>
 
                         <div class="vertical-line w3-dropdown-hover"></div>
 
@@ -372,8 +372,8 @@ mark { background-color:#fff; color:black; }
                                 <button class="dropbtn  "> Publications</button>
                                 <div class="dropdown-content">
                                     <ul>
-                                        <li><a href="{{ url_for(" publications") }}" >Publications</a></li>
-                                        <li><a href="{{ url_for(" Presentations") }}" >Presentations</a></li>
+                                        <li><a href="{{ url_for('publications') }}" >Publications</a></li>
+                                        <li><a href="{{ url_for('Presentations') }}" >Presentations</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -393,22 +393,22 @@ mark { background-color:#fff; color:black; }
                         </div>
 
                         <div class="vertical-line w3-dropdown-hover"></div>
-                        <li><a class="menu-link" href="{{ url_for(" tools") }}">Tools</a></li>
+                        <li><a class="menu-link" href='{{ url_for('tools') }}">Tools</a></li>
 
 
                         <div class="vertical-line w3-dropdown-hover"></div>
-                        <li><a class="menu-link" href="{{ url_for(" data_archive") }}">Data Archive</a> </li>
+                        <li><a class="menu-link" href="{{ url_for('data_archive') }}">Data Archive</a> </li>
                         <div class="vertical-line w3-dropdown-hover"></div>
 
-                        <li><a class="menu-link" href="{{ url_for(" links") }}">Links</a></li>
+                        <li><a class="menu-link" href="{{ url_for('links') }}">Links</a></li>
 
 
                         {% if session.logged_in %}
-                        <li style="float:right;"><a class="menu-link" href="{{ url_for(" logout") }}" class="w3-right "><b>Log
+                        <li style="float:right;"><a class="menu-link" href="{{ url_for('logout') }}" class="w3-right "><b>Log
                             Out</b></a></li>
 
                         {% else %}
-                        <li style="float:right;"><a class="menu-link" href="{{ url_for(" login") }}" class="w3-right
+                        <li style="float:right;"><a class="menu-link" href="{{ url_for('login') }}" class="w3-right
                             "><b>Log In</b></a></li>
 
                         {% endif %}
