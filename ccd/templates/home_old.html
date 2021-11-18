@@ -4,38 +4,6 @@
 
 {% block content %}
 <style>
-
-    .rslides {
-      position: relative;
-      list-style: none;
-      overflow: hidden;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      }
-
-    .rslides li {
-      -webkit-backface-visibility: hidden;
-      position: absolute;
-      display: none;
-      width: 100%;
-      left: 0;
-      top: 0;
-      }
-
-    .rslides li:first-child {
-      position: relative;
-      display: block;
-      float: left;
-      }
-
-    .rslides img {
-      display: block;
-      height: auto;
-      float: left;
-      width: 100%;
-      border: 0;
-      }
     * {
       box-sizing: border-box;
     }
@@ -78,15 +46,7 @@
 
 <div class="w3-container w3-white" style = "padding-top: 100px;">
 <body >
-    <ul class="rslides">
-        <li><img src="{{url_for('static',filename='images/genetic_resources.png')}}" alt=""></li>
-        <li><img src="{{url_for('static',filename='images/harnessing_diversity.png')}}" alt=""></li>
-        <li><img src="{{url_for('static',filename='images/advancing_domestication.png')}}" alt=""></li>
-        <li><img src="{{url_for('static',filename='images/enabling_discovery.png')}}" alt=""></li>
-        <li><img src="{{url_for('static',filename='images/expediting_delivery.png')}}" alt=""></li>
-        <li><img src="{{url_for('static',filename='images/valuating_diversity.png')}}" alt=""></li>
-    </ul>
- <!--   <div class="column">
+    <div class="column">
         <a href="{{ url_for("main") }}"><p id="homeheader" class = "p2">GENETIC RESOURCES
         </p></a>    
         
@@ -155,7 +115,7 @@
                 <img alt="4dwheat_logo" src="{{url_for('static',filename='images/valuating_diversity.png')}}" style="width:100%"/>
             </a> 
           
-        </div>-->
+        </div>
 
       
 </body>

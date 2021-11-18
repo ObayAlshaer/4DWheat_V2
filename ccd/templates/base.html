@@ -17,8 +17,10 @@
 
     <!-- JS -->
     <script src="{{ url_for('static', filename='js/jquery-1.12.4.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>
+<!--    <script src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script> -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/stellarnav.min.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='responsiveslides.min.js') }}"></script>
 
 </head>
 
@@ -263,6 +265,7 @@ p#logo_text{
 	  jQuery(document).ready(function($) {
 		jQuery('.stellarnav').stellarNav({theme: 'plain'});
 	  });
+	  $(".rslides").responsiveSlides();
       // passes on every "a" tag
       $(".topmenu a").each(function() {
           // checks if its the same on the address bar
