@@ -69,7 +69,30 @@
     a p:hover {
   color: rgb(108, 192, 93);
 }
-
+.rslides .prev {
+    width: 42px;
+    height: 78px;
+    left: 6%;
+    top: 50%;
+    margin-top: -39px;
+    position: absolute;
+    display: block;
+    text-indent: -200000px;
+    background: url({{url_for('static',filename='images/slide_prev.png')}}) no-repeat 0 0;
+    z-index: 100;
+}
+.rslides .next {
+    width: 42px;
+    height: 78px;
+    right: 6%;
+    top: 50%;
+    margin-top: -39px;
+    position: absolute;
+    display: block;
+    text-indent: -200000px;
+    background: url({{url_for('static',filename='images/slide_next.png')}}) no-repeat 0 0;
+    z-index: 100;
+}
     img:hover{
     }
     </style>
@@ -164,7 +187,7 @@
 
 
 
-<div class="w3-container w3-white" style = "padding-bottom: 100px;">
+<!--<div class="w3-container w3-white" style = "padding-bottom: 100px;">
     <body>
         
             <div class="column">
@@ -196,6 +219,6 @@
                 </p>
             </div>
           
-    </body>
+    </body>-->
     </div>
 {% endblock %}
