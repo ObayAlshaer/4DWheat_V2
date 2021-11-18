@@ -293,52 +293,50 @@ p#logo_text{
                             <a href="https://www.genomecanada.ca/en/4dwheat-diversity-discovery-design-and-delivery">
                                 <img id="genome_canada_logo" alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}"/>
                             </a>
-                        </div>
                         <div>
                             <p id="logo_text">A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES &#124; <i>2018 Large-Scale Applied Research Project Competition (2019-2024)</i></p>
                         </div>
+
+                            <div class="stellarnav">
+                                <ul>
+                                    <li><a href="{{ url_for('main') }}">Home</a></li>
+                                    <li><a href="#">Participants</a>
+                                        <ul>
+                                            <li><a href="{{ url_for('research_team') }}">Research Team</a></li>
+                                            <li><a href="{{ url_for('roc_member') }}">ROC members</a></li>
+                                            <li><a href="{{ url_for('management_team') }}">Management Team</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Activities</a>
+                                        <ul>
+                                            <li><a href="{{ url_for('activity_overview') }}">Overview</a></li>
+                                            <li><a href="{{ url_for('activity1') }}">Activity 1: Harnessing Diversity</a></li>
+                                            <li><a href="{{ url_for('activity2') }}">Activity 2: Advancing Domestication</a></li>
+                                            <li><a href="{{ url_for('activity3') }}">Activity 3: Enabling Discovery</a></li>
+                                            <li><a href="{{ url_for('activity4') }}">Activity 4: Expediting Delivery</a></li>
+                                            <li><a href="{{ url_for('activity5') }}">Activity 5: Valuating Diversity</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('Progress') }}">Progress</a></li>
+                                    <li><a href="#">Publications</a>
+                                        <ul>
+                                            <li><a href="{{ url_for('publications') }}">Publications</a></li>
+                                            <li><a href="{{ url_for('Presentations') }}">Presentations</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Databases</a>
+                                        <ul>
+                                            <li><a href="#">4DWheat Database</a></li>
+                                            <li><a href="http://10.113.72.170/ccd_genome_browsers">Genome Browser</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('tools') }}">Tools</a></li>
+                                    <li><a href="{{ url_for('data_archive') }}">Data Archive</a></li>
+                                    <li><a href="{{ url_for('links') }}">Links</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div style="background-color: rgb(255, 255, 255); padding-bottom: 1px;">
-                </div>
-                <div class="stellarnav">
-                    <ul>
-                        <li><a href="{{ url_for('main') }}">Home</a></li>
-                        <li><a href="#">Participants</a>
-                            <ul>
-                                <li><a href="{{ url_for('research_team') }}">Research Team</a></li>
-                                <li><a href="{{ url_for('roc_member') }}">ROC members</a></li>
-                                <li><a href="{{ url_for('management_team') }}">Management Team</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Activities</a>
-                            <ul>
-                                <li><a href="{{ url_for('activity_overview') }}">Overview</a></li>
-                                <li><a href="{{ url_for('activity1') }}">Activity 1: Harnessing Diversity</a></li>
-                                <li><a href="{{ url_for('activity2') }}">Activity 2: Advancing Domestication</a></li>
-                                <li><a href="{{ url_for('activity3') }}">Activity 3: Enabling Discovery</a></li>
-                                <li><a href="{{ url_for('activity4') }}">Activity 4: Expediting Delivery</a></li>
-                                <li><a href="{{ url_for('activity5') }}">Activity 5: Valuating Diversity</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ url_for('Progress') }}">Progress</a></li>
-                        <li><a href="#">Publications</a>
-                            <ul>
-                                <li><a href="{{ url_for('publications') }}">Publications</a></li>
-                                <li><a href="{{ url_for('Presentations') }}">Presentations</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Databases</a>
-                            <ul>
-                                <li><a href="#">4DWheat Database</a></li>
-                                <li><a href="http://10.113.72.170/ccd_genome_browsers">Genome Browser</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ url_for('tools') }}">Tools</a></li>
-                        <li><a href="{{ url_for('data_archive') }}">Data Archive</a></li>
-                        <li><a href="{{ url_for('links') }}">Links</a></li>
-                    </ul>
-                </div>
             </div>
         </div><!--card-->
         <!--top-->
