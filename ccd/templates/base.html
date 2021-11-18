@@ -243,7 +243,9 @@ mark { background-color:#fff; color:black; }
   $(function() {
       // this will get the full URL at the address bar
       var url = window.location.href;
-
+	  jQuery(document).ready(function($) {
+		jQuery('.stellarnav').stellarNav({theme: 'light', position: 'top'});
+	  });
       // passes on every "a" tag
       $(".topmenu a").each(function() {
           // checks if its the same on the address bar
@@ -267,13 +269,7 @@ mark { background-color:#fff; color:black; }
     var heightNeeded = 　UpperBodyHeight * 0.8 + FooterHeight*0.8 ;
     console.log("height:  "+ FooterHeight +"px");
     document.getElementById('page-container').style.height = heightNeeded +'px';
-　　} 
-
-
-
-	jQuery(document).ready(function($) {
-		jQuery('.stellarnav').stellarNav({theme: 'light', position: 'top'});
-	});
+　　}
 
 </script>
 <body style="background-color:#ffffff ;">
