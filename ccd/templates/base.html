@@ -235,7 +235,7 @@ mark { background-color:#fff; color:black; }
   font-size: 15px;
   vertical-align:top;
  }
-
+ .
 
 </style>
 
@@ -244,7 +244,7 @@ mark { background-color:#fff; color:black; }
       // this will get the full URL at the address bar
       var url = window.location.href;
 	  jQuery(document).ready(function($) {
-		jQuery('.stellarnav').stellarNav({theme: 'plain'});
+		jQuery('.stellarnav').stellarNav({theme: 'light'});
 	  });
       // passes on every "a" tag
       $(".topmenu a").each(function() {
@@ -301,7 +301,7 @@ mark { background-color:#fff; color:black; }
                 </div>
                 <div style="background-color: rgb(255, 255, 255); padding-bottom: 1px;">
                 </div>
-                <div class="stellarnav">
+                <div class="stellarnav dropdown">
                     <ul>
                         <li><a href="{{ url_for('main') }}">Home</a></li>
                         <li><a href="#">Participants</a>
