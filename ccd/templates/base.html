@@ -229,7 +229,11 @@ mark { background-color:#fff; color:black; }
     position: relative;
     height: 200px;
 }
-
+.logo_imgs {
+    position: relative;
+    height: 200px;
+    padding-left: 85px;
+}
 img#wheat_logo_img {
     height: 100%;
 }
@@ -289,7 +293,7 @@ p#logo_text{
                 <div class="banner">
                     <div>
                         <div class="logos">
-                            <div>
+                            <div class="logo_imgs">
                             <a href="{{ url_for('main') }}">
                                 <img id="wheat_logo_img" alt="4dwheat_logo" src="{{url_for('static',filename='images/4dwheat_modern.png')}}"/>
                             </a>
