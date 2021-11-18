@@ -265,7 +265,10 @@ p#logo_text{
 	  jQuery(document).ready(function($) {
 		jQuery('.stellarnav').stellarNav({theme: 'plain'});
 	  });
-	  $(".rslides").responsiveSlides();
+	  $(".rslides").responsiveSlides({
+	    pager: true,
+	    nav: true
+	  });
       // passes on every "a" tag
       $(".topmenu a").each(function() {
           // checks if its the same on the address bar
