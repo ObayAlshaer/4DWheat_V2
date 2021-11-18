@@ -217,8 +217,9 @@ mark { background-color:#fff; color:black; }
 
 .stellarnav {
   font-family: 'Roboto Condensed', sans-serif;
-  width: 80%;
+  width: 100%%;
   margin: 0 auto;
+  background-image: linear-gradient(to right,#f8f3b9, #c0d844);
 }
 
 .stellarnav>ul>li>a {
@@ -256,7 +257,7 @@ p#logo_text{
       // this will get the full URL at the address bar
       var url = window.location.href;
 	  jQuery(document).ready(function($) {
-		jQuery('.stellarnav').stellarNav({theme: 'dark'});
+		jQuery('.stellarnav').stellarNav({theme: 'plain'});
 	  });
       // passes on every "a" tag
       $(".topmenu a").each(function() {
