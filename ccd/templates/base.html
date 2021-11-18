@@ -20,11 +20,6 @@
     <script src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/stellarnav.min.js') }}"></script>
 
-    <script type="text/javascript">
-	jQuery(document).ready(function($) {
-		jQuery('.stellarnav').stellarNav({theme: 'light', position: 'top'});
-	});
-    </script>
 </head>
 <!--
 <style>
@@ -276,7 +271,9 @@ mark { background-color:#fff; color:black; }
 
 
 
-
+	jQuery(document).ready(function($) {
+		jQuery('.stellarnav').stellarNav({theme: 'light', position: 'top'});
+	});
 
 </script>
 <body style="background-color:#ffffff ;">
