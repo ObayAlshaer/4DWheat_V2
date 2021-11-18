@@ -245,10 +245,13 @@ mark { background-color:#fff; color:black; }
     height: 200px
 }
 #4dwheat_logo {
+    float: left;
     max-width: 100%;
     max-height: 100%;
 }
-#genome_canada_logo {}
+#genome_canada_logo {
+    float: right;
+}
 
 </style>
 
@@ -293,17 +296,17 @@ mark { background-color:#fff; color:black; }
             <div class="w3-bar">
                 <div class="banner">
                     <div>
-                        <div class="logo">
+                        <div class="logos">
                             <a href="{{ url_for('main') }}">
                                 <img id="4dwheat_logo" alt="4dwheat_logo" src="{{url_for('static',filename='images/4dwheat_modern.png')}}" />
                             </a>
-                            <div class="logo_text">
-                                <p>A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES</p>
-                                <p>2018 Large-Scale Applied Research Project Competition (2019-2024)</p>
-                            </div>
                             <a href="https://www.genomecanada.ca/en/4dwheat-diversity-discovery-design-and-delivery">
                                 <img id="genome_canada_logo" alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}"/>
                             </a>
+                        </div>
+                        <div class="logo_text">
+                            <p>A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES</p>
+                            <p>2018 Large-Scale Applied Research Project Competition (2019-2024)</p>
                         </div>
                     </div>
                 </div>
