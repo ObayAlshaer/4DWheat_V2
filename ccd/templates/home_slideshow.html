@@ -4,6 +4,38 @@
 
 {% block content %}
 <style>
+
+    .rslides {
+      position: relative;
+      list-style: none;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      }
+
+    .rslides li {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      display: none;
+      width: 100%;
+      left: 0;
+      top: 0;
+      }
+
+    .rslides li:first-child {
+      position: relative;
+      display: block;
+      float: left;
+      }
+
+    .rslides img {
+      display: block;
+      height: auto;
+      float: left;
+      width: 100%;
+      border: 0;
+      }
     * {
       box-sizing: border-box;
     }
@@ -37,7 +69,30 @@
     a p:hover {
   color: rgb(108, 192, 93);
 }
-
+a.rslides_nav.rslides1_nav.prev {
+    width: 42px;
+    height: 78px;
+    left: 6%;
+    top: 50%;
+    margin-top: -39px;
+    position: absolute;
+    display: block;
+    text-indent: -200000px;
+    background: url({{url_for('static',filename='images/slide_prev.png')}}) no-repeat 0 0;
+    z-index: 100;
+}
+a.rslides_nav.rslides1_nav.next {
+    width: 42px;
+    height: 78px;
+    right: 6%;
+    top: 50%;
+    margin-top: -39px;
+    position: absolute;
+    display: block;
+    text-indent: -200000px;
+    background: url({{url_for('static',filename='images/slide_next.png')}}) no-repeat 0 0;
+    z-index: 100;
+}
     img:hover{
     }
     </style>
@@ -46,7 +101,41 @@
 
 <div class="w3-container w3-white" style = "padding-top: 100px;">
 <body >
-    <div class="column">
+    <ul class="rslides">
+        <li>
+            <img src="{{url_for('static',filename='images/genetic_resources.png')}}" alt="">
+            <div class="slide_caption">
+                <h1>Wild Relatives, Synthetics NAM Population</h1>
+            </div>
+        </li>
+        <li>
+            <img src="{{url_for('static',filename='images/harnessing_diversity.png')}}" alt="">
+            <div class="slide_caption">
+                <h1>Genome Sequences Annotation, Chromosome Interactions</h1>
+            </div>
+        </li>
+        <li><img src="{{url_for('static',filename='images/advancing_domestication.png')}}" alt="">
+            <div class="slide_caption">
+                <h1>CRISPR-CAS9, Combining Ability, D Genome Variation</h1>
+            </div>
+        </li>
+        <li><img src="{{url_for('static',filename='images/enabling_discovery.png')}}" alt="">
+        <div class="slide_caption">
+                <h1>Gene Isolation, Gene Suppression, Epistatic Interactions</h1>
+            </div>
+        </li>
+        <li><img src="{{url_for('static',filename='images/expediting_delivery.png')}}" alt="">
+        <div class="slide_caption">
+                <h1>Precision Phenotype, Physiological/Disease Application</h1>
+            </div>
+        </li>
+        <li><img src="{{url_for('static',filename='images/valuating_diversity.png')}}" alt="">
+        <div class="slide_caption">
+                <h1>Global Access, Utilization Policies</h1>
+            </div>
+        </li>
+    </ul>
+ <!--   <div class="column">
         <a href="{{ url_for("main") }}"><p id="homeheader" class = "p2">GENETIC RESOURCES
         </p></a>    
         
@@ -115,7 +204,7 @@
                 <img alt="4dwheat_logo" src="{{url_for('static',filename='images/valuating_diversity.png')}}" style="width:100%"/>
             </a> 
           
-        </div>
+        </div>-->
 
       
 </body>
@@ -124,7 +213,7 @@
 
 
 
-<div class="w3-container w3-white" style = "padding-bottom: 100px;">
+<!--<div class="w3-container w3-white" style = "padding-bottom: 100px;">
     <body>
         
             <div class="column">
@@ -156,6 +245,6 @@
                 </p>
             </div>
           
-    </body>
+    </body>-->
     </div>
 {% endblock %}
