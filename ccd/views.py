@@ -15,7 +15,7 @@ from models import *
 def main():
    #news = News.query.order_by("id desc")
    news = News.query.order_by(text('id desc'))
-   return render_template('home.html',news=news)
+   return render_template('home_slideshow.html',news=news)
 
 @app.route('/news_add',methods=['GET','POST'])
 def news_add():
