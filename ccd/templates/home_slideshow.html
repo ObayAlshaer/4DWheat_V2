@@ -95,6 +95,38 @@ a.rslides_nav.rslides1_nav.next {
 }
     img:hover{
     }
+
+    .readMoreBtn {
+  width: 150px;
+  font: bold 14px Arial, Helvetica, sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.readMoreBtn a {
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 15px 20px;
+  display: block;
+  /* start add border radius */
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  /* end add border radius */
+  /* start transition animation */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  /* end transition animation */
+}
+
+.readMoreBtn a:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+}
     </style>
 
     
@@ -106,32 +138,62 @@ a.rslides_nav.rslides1_nav.next {
             <img src="{{url_for('static',filename='images/green_wheat.jpg')}}" alt="">
             <div class="slide_caption">
                 <a href="{{ url_for('main') }}"><h1>Wild Relatives, Synthetics NAM Population</h1></a>
+                <div class="readMoreBtn">
+      <a href="#">
+        Read More
+      </a>
+    </div>
             </div>
         </li>
         <li>
             <img src="{{url_for('static',filename='images/wheat_field.png')}}" alt="">
             <div class="slide_caption">
                 <a href="{{ url_for('activity1') }}"><h1>Genome Sequences Annotation, Chromosome Interactions</h1></a>
+                <div class="readMoreBtn">
+      <a href="#">
+        Read More
+      </a>
+    </div>
             </div>
         </li>
         <li><img src="{{url_for('static',filename='images/wheat_lab.jpg')}}" alt="">
             <div class="slide_caption">
                 <a href="{{ url_for('activity2') }}"><h1>CRISPR-CAS9, Combining Ability, D Genome Variation</h1></a>
+                <div class="readMoreBtn">
+      <a href="#">
+        Read More
+      </a>
+    </div>
             </div>
         </li>
         <li><img src="{{url_for('static',filename='images/wheat_dna.jpg')}}" alt="">
         <div class="slide_caption">
                 <a href="{{ url_for('activity3') }}"><h1>Gene Isolation, Gene Suppression, Epistatic Interactions</h1></a>
+            <div class="readMoreBtn">
+      <a href="#">
+        Read More
+      </a>
+    </div>
             </div>
         </li>
         <li><img src="{{url_for('static',filename='images/wheat_drone.jpg')}}" alt="">
         <div class="slide_caption">
                 <a href="{{ url_for('activity4') }}"><h1>Precision Phenotype, Physiological/Disease Application</h1></a>
+            <div class="readMoreBtn">
+      <a href="#">
+        Read More
+      </a>
+    </div>
             </div>
         </li>
         <li><img src="{{url_for('static',filename='images/wheat_globe.jpg')}}" alt="">
         <div class="slide_caption">
                 <a href="{{ url_for('activity5') }}"><h1>Global Access, Utilization Policies</h1></a>
+            <div class="readMoreBtn">
+      <a href="#">
+        Read More
+      </a>
+    </div>
             </div>
         </li>
     </ul>
