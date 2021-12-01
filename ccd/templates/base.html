@@ -27,7 +27,11 @@
 
 <style>
 
-
+body {
+  background-image: url({{ url_for ('static', filename='images/wheat_bottom.png') }});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 a.table_body{
     color: rgb(79, 156, 34);
 }
@@ -469,9 +473,6 @@ p#logo_text{
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div id="wheat_heads_bottom">
-                <img src="{{ url_for ('static', filename='images/wheat_bottom.png') }}" />
             </div>
         </footer>
     </div>
