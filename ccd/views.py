@@ -3,8 +3,8 @@ Views
 '''
 
 # Imports ---------------------------------------------------------------------
-import re
-from flask import request, session, redirect, url_for, render_template, flash
+import re, os
+from flask import request, session, redirect, url_for, render_template, flash, send_file
 from sqlalchemy.sql import text
 from forms import *
 from models import *
@@ -871,3 +871,11 @@ def Presentations_delete():
 def data_archive():
    return render_template('data_archive.html')
 
+@app.route('/data_archive_353_panel',methods=['GET','POST'])
+def data_archive_353_panel():
+   return render_template('data_archive_353_panel.html')
+
+@app.route('/download_file/<path:filename>', methods=['GET','POST'])
+def download_file(filename):
+    print app.root_path;
+    return send_file(filename, as_attachment=True)
