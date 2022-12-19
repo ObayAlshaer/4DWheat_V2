@@ -566,7 +566,6 @@ Phenotypic data for winter diversity panel: many years and each tab represent a 
 <p></p>
 
 <p style = "text-align: center;font-weight: 700;" >Raw phenotypic data files</p>
-
 <table id="Genome_size" class = "center">
     <tr>
       <th>Panel</th>
@@ -577,7 +576,7 @@ Phenotypic data for winter diversity panel: many years and each tab represent a 
     </tr>
     <tr>
       <td>Spring</td>
-      <td>LR, FHR, PM, agronimic traits</td>
+      <td>LR, FHB, PM, Agronimic traits (awn, height, days to heading, days to maturity, loding, yield, TKW)</td>
       <td>2016, 2017, 2018, 2019, 2020, 2021, 2022</td>
       <td>PEI, LTB, OTT, SKT, MDN</td>
       <td><a class = "table-column-link", href="{{ url_for ('static', filename='/data_files/pheno_data/raw/2016_2017_2018_2019_2020_2021_2022_DivPanelS_LR_FHB_AGR_PM_Summary.xlsx') }}">2016_2017_2018_2019_2020_2021_2022_DivPanelS_LR_FHB_AGR_PM_Summary.xlsx</a></td>
@@ -591,7 +590,7 @@ Phenotypic data for winter diversity panel: many years and each tab represent a 
     </tr>
     <tr>
       <td>Spring</td>
-      <td>LR, FHB, PM, Agronomic traits</td>
+      <td>LR, FHB, PM, Agronomic traits (awn, TSW, days to heading)</td>
       <td>2016, 2017, 2018, 2019, 2020, 2021</td>
       <td>MDN, OTT, PEI</td>
       <td><a class = "table-column-link", href="/data_files/pheno_data/raw/2016_2017_2018_2019_2020_2021_DivPanelS_LR_FHB_AGR_PM_Summary.xlsx">2016_2017_2018_2019_2020_2021_DivPanelS_LR_FHB_AGR_PM_Summary.xlsx</a></td>
@@ -612,26 +611,70 @@ Phenotypic data for winter diversity panel: many years and each tab represent a 
     </tr>
     <tr>
       <td>Spring</td>
-      <td>LR</td>
+      <td>LR infection type (IT) score</td>
       <td>2019</td>
       <td>MDN, indoor</td>
       <td><a class = "table-column-link", href="/data_files/pheno_data/raw/2019_02_14_DivPanelS_LRpostulation.xlsx">2019_02_14_DivPanelS_LRpostulation.xlsx</a></td>
     </tr>
     <tr>
       <td>Winter</td>
-      <td>LR</td>
+      <td>LR IT score</td>
       <td>2019 </td>
       <td>MDN, indoor</td>
       <td><a class = "table-column-link", href="/data_files/pheno_data/raw/2019_02_14_DivPanelW_LRpostulation.xlsx">2019_02_14_DivPanelW_LRpostulation.xlsx</a></td>
     </tr>
     <tr>
       <td>Winter</td>
-      <td>LR</td>
+      <td>LR IT score</td>
       <td>2021</td>
       <td>MDN, indoor</td>
       <td><a class = "table-column-link", href="/data_files/pheno_data/raw/2021_10_13_DivPanelW_LRpostulation.xlsx">2021_10_13_DivPanelW_LRpostulation.xlsx</a></td>
     </tr>
   </table>
+<p style = "font-size: 12px; font-weight: 500; padding-left: 130px;" >LR: leaf rust; FHB: Fusarium head blight; PM: powdery mildew;
+    TWK: thousand kernel weight; TSW: thousand seed weight.<br>
+    MDN: Morden, Manitoba; OTT: Ottawa, Ontario; SKT: Saskatoon, Saskatchewan,
+    PEI:  Prince Edward Island; LTB: Lethbridge, Alberta.
+  </p>
+
+<p style = "text-align: center;font-weight: 700;" >Processed phenotypic data files</p>
+<table id="Genome_size" class = "center">
+    <tr>
+      <th>Panel</th>
+        <th>No. of accessions</th>
+      <th>Traits</th>
+      <th>Year</th>
+      <th>Location</th>
+      <th>Data file download link</th>
+        <th> Reference</th>
+    </tr>
+    <tr>
+      <td>Spring, Winter</td>
+        <td>213 (Spring), 164 (Winter)</td>
+      <td>LR severity BLUP estimates over years and locations</td>
+      <td>2016, 2017, 2018, 2019</td>
+      <td>OTT, SKT, MDN</td>
+      <td><a class = "table-column-link", href="{{ url_for ('static', filename='/data_files/pheno_data/processed/LR_severity_BLUP_scores_SpringP_and_WinterP_2016-2019.xlsx') }}">LR_severity_BLUP_scores_SpringP_and_WinterP_2016-2019.xlsx</a></td>
+        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7701059/">Fatima et al. (2020)</a> </td>
+    </tr>
+    <tr>
+       <td>Spring, Winter</td>
+        <td>213 (Spring), 164 (Winter)</td>
+       <td>LR severity Cobbs scores over years and locations</td>
+       <td>2016, 2017, 2018, 2019</td>
+      <td>OTT, SKT, MDN</td>
+       <td><a class = "table-column-link", href="/data_files/pheno_data/processed/LR_severity_cobbs_scores_SpringP_and_WinterP_2016-2019.xlsx">LR_severity_cobbs_scores_SpringP_and_WinterP_2016-2019.xlsx</a></td>
+        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7701059/">Fatima et al. (2020)</a> </td>
+    </tr>
+</table>
+<p style = "font-size: 12px; font-weight: 500; padding-left: 130px;" >
+    LR: leaf rust; FHB: Fusarium head blight.<br>
+    MDN: Morden, Manitoba; OTT: Ottawa, Ontario; SKT: Saskatoon, Saskatchewan.
+  </p>
+
+
+
+
 
 
 <!--
@@ -642,5 +685,51 @@ Phenotypic data for winter diversity panel: many years and each tab represent a 
 -->
 
 <span id = "GenomicData" class = "tier-title" style="width:100%;margin-bottom:20px;">Genomic Data</span>
-<p>Genomic data of the genetic panel will be available soon.</p>
+<p>SNP data of the  wheat diversity panel (385 accessions).</p>
+<p style = "text-align: center;font-weight: 700;" >SNP data files of 90K markers for the 385 accessions in the diversity panel</p>
+<table id="Genome_size" class = "center">
+    <tr>
+      <th>Data file discription</th>
+        <th>No. of accessions</th>
+      <th>No. of SNPs</th>
+      <th>RefSeq version</th>
+      <th>File format</th>
+      <th>Data file download link</th>
+    </tr>
+    <tr>
+      <td>Filtered and validated SNPs for validated and filter for the wheat diversity panel</td>
+        <td>385</td>
+      <td>20501</td>
+      <td></td>
+      <td>hmp</td>
+      <td><a class = "table-column-link", href="{{ url_for ('static', filename='/data_files/genomic_data/20501_SNPs_filtered_385_accessions.hmp.zip') }}">20501_SNPs_filtered_385_accessions.hmp.zip</a></td>
+    </tr>
+    <tr>
+       <td>SNPs mapped to Wheat RefSeq v1.1</td>
+        <td>385</td>
+       <td>12617</td>
+      <td>Wheat RefSeq 1.1</td>
+       <td>csv</td>
+       <td><a class = "table-column-link", href="/data_files/genomic_data/mapped_12617_SNPs_385_accessions.zip">mapped_12617_SNPs_385_accessions.zip</a></td>
+    </tr>
+    <tr>
+       <td>Info for mapping 90K SNPs to wheat RefSeq 1.1</td>
+        <td></td>
+       <td>43013</td>
+      <td>Wheat RefSeq 1.1</td>
+       <td>Excel</td>
+       <td><a class = "table-column-link", href="/data_files/genomic_data/Mapping_of_43K_SNPs_on_CS_RefSeq_v.1.1.xlsx">Mapping_of_43K_SNPs_on_CS_RefSeq_v.1.1.xlsx</a></td>
+    </tr>
+    <tr>
+       <td>SNPs mapped to Wheat RefSeq v2.1 for the FHB study</td>
+        <td>279</td>
+       <td>13760</td>
+      <td>Wheat RefSeq 2.1</td>
+       <td>vcf</td>
+       <td><a class = "table-column-link", href="/data_files/genomic_data/Wheat_279_genotypes_13760_SNPs.zip">Wheat_279_genotypes_13760_SNPs.zip</a></td>
+    </tr>
+</table>
+
+
+
 {% endblock %}
