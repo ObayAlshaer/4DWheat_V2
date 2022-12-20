@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+.view-button{
+    color:rgb(18, 92, 161); 
+    background-color: rgb(167, 206, 243);
+    
+    border: none;
+    
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.view-button:hover{
+    color:rgb(7, 59, 109); 
+    background-color: rgb(124, 173, 219);
+}
+
+		    ul {
+			    padding-left: 35px;
+		    }
+		    input, button, select {
+			    font-size: 16px;
+
+		    }
+        </style>
+
+</style>
+<p></p>
+<div style="overflow:scroll; height:800px; width:1600px">
+    <iframe src="{{ url_for ('static', filename=filename) }}" align="center", width="1000px" height="100%"/>
+</div>
+{% endblock %}

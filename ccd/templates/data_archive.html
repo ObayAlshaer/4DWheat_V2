@@ -32,9 +32,11 @@
 </style>
 
 <div class="container">
-<h3><Center><b>Data Archive</b></Center></h3>
 
-        <h3>Internal Data</h3>
+
+<h3><Center><b>Data Archive</b></Center></h3>
+<ul>
+    <li><h3>Internal Data</h3></li>
             <a href="{{ url_for("data_archive_login") }}" class="view-button" >Internal Project Data Archive log in</a>
 
 <!--
@@ -42,7 +44,6 @@
 <a href="{{ url_for("login" , condition=1) }}" class="view-button">you can view it if you log in</a>
 {% endif %}
 -->
-          <ul>
               <li><h3><a class = "table-column-link"  href="{{ url_for('data_archive_385_panel') }}" target="_blank">Phenotypic and genomic data for the wheat diversity panel of 353 accessions</a></h3>
               </li>
           </ul>

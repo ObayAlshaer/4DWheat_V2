@@ -879,3 +879,10 @@ def data_archive_385_panel():
 def download_file(filename):
     print app.root_path;
     return send_file(filename, as_attachment=True)
+
+@app.route('/pdf_file_display/<path:filename>', methods=['GET'])
+def pdf_file_display(filename) :
+    #pdf_file = os.path.join(app.root_path, filename)
+    #return render_template('display_pdf_file.html', filename=pdf_file)
+    return render_template('display_pdf_file.html', filename=filename)
+
