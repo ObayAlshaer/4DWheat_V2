@@ -4,7 +4,7 @@ CONFIG
 '''
 
 #SQLALCHEMY_DATABASE_URI = 'mysql://root:Xyh@1999@localhost/ccd?charset=utf8'
-SQLALCHEMY_DATABASE_URI = 'mysql://root:!QAZ2wsx@127.0.0.1/ccd?charset=utf8'   # need to change to web address in the production mode
+SQLALCHEMY_DATABASE_URI = 'mysql://root:!QAZ2wsx@localhost/ccd?charset=utf8'   # need to change to web address in the production mode
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 SQLALCHEMY_ECHO = False
 
