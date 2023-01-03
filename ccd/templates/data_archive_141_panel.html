@@ -1,0 +1,850 @@
+{% extends "activity_base.html" %}
+
+{% block activity1_left %}
+
+<li ><a href="#PhenoData">Phenotypic data</a></li>
+<li ><a href="#GenomicData">Genomic data</a></li>
+
+{% endblock %}
+
+{% block activity1_right %}
+
+<style>
+.view-button{
+    color:rgb(18, 92, 161); 
+    background-color: rgb(167, 206, 243);
+    
+    border: none;
+    
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.view-button:hover{
+    color:rgb(7, 59, 109); 
+    background-color: rgb(124, 173, 219);
+}
+
+Genome_size td:nth-child(1) {
+  font-style: italic;
+}
+
+</style>
+
+<div class="container">
+<h3><Center><b>Phenotypic and exome capture sequence based SNP data for the wheat diversity panel of 141 accessions</b></Center></h3>
+
+<span id = "PhenoData" class = "tier-title" style="width:100%;margin-bottom:20px;">Phenotypic Data</span>
+
+<p><b>Diversity Panel:</b> </p>
+<p>The panel includes a diverse collection of 385 accessions, encompassing 27 different species of cultivated wheats, synthetic hybrid wheat (SHWs), progenitor
+    species and wild relatives were used in this study. The AB and ABD genomes are represented by 170 accessions representing <i>T. vavilovii</i>
+    and several subspecies of <i>T. turgidum</i> and <i>T. aestivum</i> as well as 65 primary SHWs. The A, B and D genome progenitors (or their closely
+    related species) and the non-domesticated forms of tetraploid wheat comprised 93 accessions of <i>T. urartu</i> (A), <i>T. monococcum</i> (A<sup>m</sup>),
+    <i>Ae. tauschii</i> (D), <i>Ae. speltoides</i> (S), as well as <i>T. turgidum</i> ssp. dicoccon and dicoccoides (AB). Another 47 accessions belonged to
+    the following Aegilops species: <i>Ae. bicornis</i> (S<sup>b</sup>), <i>Ae. longissima</i> (S<sup>l</sup>), <i>Ae. searsii</i> (S<sup>s</sup>), <i>Ae. sharonensis</i> (S<sup>sh</sup>), <i>Ae. markgrafii</i> (C),
+    <i>Ae. comosa</i> (M), <i>Ae. umbellulata</i> (U), <i>Ae. geniculata</i> (MU), <i>Ae. peregrina</i> (SU), <i>Ae. triuncialis</i> (UC/CU), <i>Ae. columnaris</i> (UM),
+    <i>Ae. cylindrica</i> (DC), <i>Ae. crassa</i> (DM/DDM), <i>Ae. juvenalis</i> (DMU), <i>Ae. biuncialis</i> and <i>Ae. neglecta</i> (UM/UMN). The collection also
+    contained six accessions of <i>T. timopheevii</i> (A<sup>t</sup>G), five of <i>T. zhukovskyi</i> (GAA<sup>m</sup>), and one of <i>Haynaldia villosa</i> (V), a related grass species.
+    Overall, the germplasm consisted of 75 diploid, 136 tetraploid, 165 hexaploid and nine accessions that could be either tetraploid or
+    hexaploid.
+</p>
+    <p>The panel contains 215 accessions of spring growth habit and 167 accessions of winter growth habit. In addition, there are five accessions that have both winter and spring growth habit.</p>
+<p>The information of all accessions in the panel is included in the file:<a class="table-column-link" href="{{url_for('static', filename='data_files/pheno_data/raw/Genetic_panel_info.XLSX')}}">Genetic_panel_info.XLSX</a>.
+</p>
+
+<p></p><p></p>
+<p style = "text-align: center;font-weight: 700;" >Summary of accessions in the genetic panel</p>
+
+<table id = "two_Sequencing_genome" class = "center">
+    <tr>
+    <th>Genome</th>
+    <th>Species</th>
+    <th>Category</th>
+    <th>Ploidy</th>
+    <th>Growth habit</th>
+    <th>No. of accessions</th>
+    </tr>
+<tr>
+<tr>
+<td>S<sup>b</sup></td>
+<td><i>Ae. bicornis</td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UM</td>
+    <td><i>Ae. biuncialis</i> = (<i>Ae. lorentii</i>)</td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UM</td>
+<td><i>Ae. columnaris<i</td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>3</td>
+</tr>
+<tr>
+<td>M</td>
+    <td><i>Ae. comosa</i></td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DM/DDM</td>
+    <td><i>Ae. crassa</i> ssp. <i>crassa</i></td>
+<td>Wild relative</td>
+<td>Teraploid/Hexaploid</td>
+<td>Winter</td>
+<td>4</td>
+</tr>
+<tr>
+<td>DM/DDM</td>
+    <td><i>Ae. crassa</i> ssp. <i>vavilovii</i></td>
+<td>Wild relative</td>
+<td>Teraploid/Hexaploid</td>
+<td>Winter</td>
+<td>4</td>
+</tr>
+<tr>
+<td>DC</td>
+    <td><i>Ae. cylindrica</i></td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MU</td>
+    <td><i>Ae. geniculata</i> (=<i>ovata</i>)</td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>4</td>
+</tr>
+<tr>
+<td>DMU</td>
+    <td><i>Ae. juvenalis</i></td>
+<td>Wild relative</td>
+<td>Hexaploid</td>
+<td>Winter</td>
+<td>3</td>
+</tr>
+<tr>
+<td>S<sup>l</sup></td>
+    <td><i>Ae. longissima</i></td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>5</td>
+</tr>
+<tr>
+<td>C</td>
+    <td><i>Ae. markgrafii</i> (=<i>caudata</i>)</td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UM/UMN</td>
+    <td><i>Ae. neglecta</i>ssp. <i>neglecta</i> or <i>recta</i></td>
+<td>Wild relative</td>
+<td>Teraploid/Hexaploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SU</td>
+    <td><i>Ae. peregrina</i> (= <i>variabilis</i>)</td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>S<sup>s</sup></td>
+    <td><i>Ae. searsii</i></td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+    <td>S<sup>sh</sup></td>
+    <td><i>Ae. sharonensis</i></td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>S</td>
+    <td><i>Ae. speltoides ligustica</i> = <i>Ae. ligustica</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>D</td>
+    <td><i>Ae. tauschii</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>32</td>
+</tr>
+<tr>
+<td>D</td>
+    <td><i>Ae. tauschii</i> var. <i>anathera</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D</td>
+    <td><i>Ae. tauschii</i> var. <i>mayeri</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D</td>
+    <td><i>Ae. tauschii</i> var. <i>strangulata</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>9</td>
+</tr>
+<tr>
+<td>UC/CU</td>
+    <td><i>Ae. triuncialis</i> </td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U</td>
+    <td><i>Ae. umbellulata</i></td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U</td>
+    <td><i>Ae. umbellulata</i> Zhuk. ssp. <i>transcaucasica</i> Dorof. & Migush.</td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>3</td>
+</tr>
+<tr>
+<td>DMS</td>
+    <td><i>Ae. vavilovii</i> (Zhuk.)</td>
+<td>Wild relative</td>
+<td>Hexaploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DN</td>
+    <td><i>Ae. ventricosa</i></td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>V</td>
+    <td><i>Haynaldia villosa</i></td>
+<td>Wild relative</td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> (synt)</td>
+<td>Synthetic Hexaploid Wheat</td>
+<td>Hexaploid</td>
+<td>Winter-Winter</td>
+<td>65</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> ssp. <i>aestivum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring-Winter</td>
+<td>64</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> ssp. <i>compactum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring</td>
+<td>3</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> ssp. <i>graecum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> ssp. <i>lutescense</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring</td>
+<td>3</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> ssp. <i>macha</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> ssp. <i>spelta</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring</td>
+<td>7</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum</i> ssp. <i>spelta</i> var. <i>vavilovii</i> Jakubz. (Spelted form)</td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. aestivum<i/> ssp. <i>spherococcum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Spring</td>
+<td>7</td>
+</tr>
+<tr>
+<td>A<sup>m</sup></td>
+    <td><i>T. monococcum</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A<sup>m</sup></td>
+    <td><i>T. monococcum</i> ssp. <i>aegilopoides</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A<sup>m</sup></td>
+    <td><i>T. monococcum</i> ssp. <i>monococcum</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>5</td>
+</tr>
+<tr>
+<td><sup>Am</sup></td>
+    <td><i>T. monococcum</i> var. <i>albo-hornemannii</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A<sup>m</sup></td>
+    <td><i>T. monococcum</i> var. <i>hornemannii</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A<sup>t</sup>G</td>
+    <td><i>T. timopheevii</i></td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A<sup>t</sup>G</td>
+    <td><i>T. timopheevii</i> (Zhuk.) Zhuk. var. <i>nigrum</i> Ericzjan (=<i>T. timonovum</i>)</td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>34</td>
+</tr>
+<tr>
+<td>SA<sup>m</sup></td>
+    <td><i>T. turgidum</i> (amphiploid)</td>
+<td>Wild relative</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> convar. <i>compositum</i> (L.f.) A.Filat. var. <i>plinianum</i> Korn.</td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> ssp. <i>carthlicum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring-Winter</td>
+<td>14</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> ssp. <i>carthlicum</i> (=<i>persicum</i>)</td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> ssp. <i>compositum</i> var. <i>plinianum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> ssp. <i>dicoccoides</i></td>
+<td>Progenitor or closely related species </td>
+<td>Tetraploid</td>
+<td>Spring-Winter</td>
+<td>13</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> ssp. <i>dicoccum</i></td>
+<td>Progenitor or closely related species </td>
+<td>Tetraploid</td>
+<td>Spring-Winter</td>
+<td>21</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum<i ssp. <i>durum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>13</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> ssp. <i>polonicum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>8</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i>ssp. <i>turgidum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>5</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> ssp. <i>turgidum</i> var. <i>striatum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Spring</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> var. <i>linnaeanum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB</td>
+    <td><i>T. turgidum</i> var. <i>linnaeanum</i> (Alef.) Korn - Australischer</td>
+<td>Domesticated or cultivated wheat</td>
+<td>Tetraploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A</td>
+    <td><i>T. urartu</i></td>
+<td>Progenitor or closely related species </td>
+<td>Diploid</td>
+<td>Winter</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ABD</td>
+    <td><i>T. vavilovii</i> (Tumanian) Jakubz. var. <i>vavilovii</i> = <i>T. syriacum</i></td>
+<td>Domesticated or cultivated wheat</td>
+<td>Hexaploid</td>
+<td>Winter</td>
+<td>4</td>
+</tr>
+<tr>
+<td>GAA<sup>m</sup></td>
+    <td><i>T. zhukovskyi</i></td>
+<td>Wild relative</td>
+<td>Hexaploid</td>
+<td>Winter</td>
+<td>5</td>
+</tr>
+</table>
+
+
+<p><b>Phenotypic data:</b> </p>
+<li>Phenotypic data for Spring diversity panel: seven years at five locations. Each tab represents a disease --  Fusarium head blight (FHB), powdery mildew (PM),
+    leaf rust (LR), stem rust (SR),  or agronomic traits.
+Phenotypic data for winter diversity panel: seven years at five locations. Each tab represents a disease (FHB and LR from field but PM is indoor)</li>
+<li>Leaf rust race specific tests done with six races on the winter and spring diversity panel. </li>
+<li>FHB type II tests were done indoor. There are two sheets: one for winter panel and one for the spring panel. Lines have various number of replications</li>
+<p></p>
+
+    <p><b><i>Field evaluation:</i></b> </p>
+<p>Phenotyping of disease resistance and other agronomic traits  was performed in separate field trials
+    for the spring and winter panels. Trials for the spring and winter panels were carried out in several locations.
+</p>
+    <p>
+For each panel, year and location, a completely randomized design with two replicates was used, except for several trials.</p>
+
+    <p><b><i>LR race-specific response:</i></b> </p>
+    <p>Consecutive inoculations with six P. triticina isolates were performed for 360 accessions of
+        the panels. All tests were performed under controlled greenhouse conditions
+        at the Morden RDC, AAFC (Morden, Canada). Briefly, test lines and the Thatcher and Emerson
+        check lines were sown into fiber trays at a rate of approximately 5 seeds per clump and 3 cm
+        between clumps, which were inoculated with individual <i>P. triticina</i> isolates at the
+        two-leaf stage as described by McCallum and Seto-Goh (2006). The isolates tested
+        were 12-3 MBDS, 128-1 MBRJ, 74-2 MGBJ, 11-180-1 TDBG, 06-1-1 TDBG, and 77-2 TJBJ,
+        which represent the prevalent leaf rust race groups across Canada (McCallum et al., 2016).
+        Virulence and avirulence formulas for these isolates are given.
+        Infection type (IT) was rated 12 days post-inoculation using a 0–4 scale
+        (<a href="https://naldc.nal.usda.gov/download/CAT10243018/PDF">Stakman et al., 1962)</a>,
+        where “;” = hypersensitive flecks, “0” = no uredinia or macroscopic sign of infection,
+        “1” = small uredinia with necrosis, “2” = small to medium uredinia with chlorosis,
+        “3” = medium uredinia without chlorosis or necrosis,
+        “4” = large uredinia without chlorosis or necrosis. IT “;” and “0” to “2” were considered
+        resistant, while “3” and “4” were considered susceptible (Long and Kolmer, 1989).
+        The “+” or “−” IT qualifiers indicate larger or smaller than average uredinia, respectively.
+        The “ = ” IT qualifier represents the lower size limit of the uredinia for the IT
+        (Long and Kolmer, 1989). Plants with randomly distributed uredinia of variable sizes,
+        or mesothetic response, were considered resistant and were rated with an “X” IT
+        (<a href="https://www.apsnet.org/publications/phytopathology/backissues/Documents/1988Articles/Phyto78n05_526.PDF">Roelfs and Martens, 1988)</a>.</p>
+
+<p style = "text-align: center;font-weight: 700;" >Availability of phenotypic data in different years and locations</p>
+
+<table id = "two_Sequencing_genome" class = "center">
+    <tr>
+    <th>Year/Location</th>
+    <th>OTT</th>
+    <th>MDN</th>
+    <th>SKT</th>
+    <th>LTB</th>
+    <th>PEI</th>
+    </tr>
+<tr>
+
+    	<tr>
+    <td>2016</td>
+    <td>FHB (severity, VRI, Incidence, DON), Awn</td>
+    <td>FHB (severity, VRI, Incidence, DON), LR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+    <tr>
+    <td>2017</td>
+    <td>FHB (severity, VRI, Incidence, DON, FDK), LR, HT, DH, DM, YLD, TKW, PM, Septoria, Loding</td>
+    <td>FHB (severity, VRI, Incidence, DON), LR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+    <tr>
+        <td>2018</td>
+        <td>FHB (severity, VRI, Incidence, DON, FDK), FHB TypeII, LR, HT, DH, DM, YLD, TKW</td>
+        <td>FHB (severity, VRI, Incidence, DON), LR</td>
+        <td></td>
+        <td>YR</td>
+        <td>PM (rating and AUPDC)</td>
+    </tr>
+    <tr>
+    <td>2019</td>
+    <td>LR</td>
+    <td>FHB (severity, VRI, Incidence, DON), LR, LR (6 LR  races incubated indoor)</td>
+    <td>LR</td>
+    <td>YR</td>
+    <td>PM (rating and AUPDC)</td>
+</tr>
+    <tr>
+        <td>2020</td>
+        <td>LR</td>
+        <td>FHB (severity, VRI, Incidence, DON, FDK)</td>
+        <td>LR</td>
+        <td>YR</td>
+        <td>PM (rating), Awn, HT</td>
+    </tr>
+    <tr>
+        <td>2021</td>
+        <td>LR</td>
+        <td>FHB (severity, VRI, Incidence, DON, FDK), LR (3 LR  races incubated indoor)</td>
+        <td>LR</td>
+        <td></td>
+        <td>PM (rating), number of seeds, seed weight</td>
+    </tr>
+    <tr>
+        <td>2022</td>
+        <td>LR</td>
+        <td>FHB (severity, VRI, Incidence, DON, FDK)</td>
+        <td>LR</td>
+        <td>YR</td>
+        <td>PM (rating), PM (AUDPC indoor test), Awn, HT, DM</td>
+    </tr>
+</table>
+<p style = "font-size: 12px; font-weight: 500; padding-left: 130px;" >
+    OTT: Ottawa, Ontario; MDN: Morden, Manitoba; SKT: Saskatoon, Saskatchewan;
+    LTB: Lethbridge, Alberta; PEI:  Prince Edward Island.<br>
+    LR: leaf rust; FHB: Fusarium head blight; PM: powdery mildew; YR: yellow rust; VRI:visual rating index; DON: mycotoxin deoxynivalenol;
+    FDK: Fusarium damaged kernels;
+    TKW: thousand kernel weight; TSW: thousand seed weight;DM: days to maturity;YLD: yield per plot;
+    HT: height; DH: days to heading.
+  </p>
+
+
+<p style = "text-align: center;font-weight: 700;" >Raw phenotypic data files</p>
+<table id="Genome_size" class = "center">
+    <tr>
+      <th>Panel</th>
+      <th>Traits</th>
+      <th>Year</th>
+      <th>Location</th>
+      <th>Data file download link</th>
+    </tr>
+    <tr>
+      <td>Spring</td>
+      <td>LR, FHB, PM, Agronimic traits (awn, height, days to heading, days to maturity, lodging, yield, TKW)</td>
+      <td>2016, 2017, 2018, 2019, 2020, 2021, 2022</td>
+      <td>PEI, LTB, OTT, SKT, MDN</td>
+      <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/raw/2016_2017_2018_2019_2020_2021_2022_DivPanelS_LR_FHB_AGR_PM_Summary.xlsx') }}">2016_2017_2018_2019_2020_2021_2022_DivPanelS_LR_FHB_AGR_PM_Summary.xlsx</a></td>
+    </tr>
+    <tr>
+       <td>Winter</td>
+       <td>FHB</td>
+       <td>2016, 2017, 2018, 2019, 2020, 2021, 2022</td>
+      <td>PEI, LTB, OTT, SKT, MDN</td>
+       <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/raw/2016_2017_2018_2019_2020_2021_2022_DivPanelW_LR_FHB_Summary.xlsx')}}">2016_2017_2018_2019_2020_2021_2022_DivPanelW_LR_FHB_Summary.xlsx</a></td>
+    </tr>
+
+    <tr>
+      <td>Winter + Spring</td>
+      <td>FHB type II</td>
+      <td>2017, 2018 </td>
+      <td>OTT</td>
+      <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/raw/2017_2018_FHB_TypeII_Summary.xlsx')}}">2017_2018_FHB_TypeII_Summary.xlsx</a></td>
+    </tr>
+    <tr>
+      <td>Spring</td>
+      <td>LR infection type (IT) score</td>
+      <td>2019</td>
+      <td>MDN, indoor</td>
+      <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/raw/2019_02_14_DivPanelS_LRpostulation.xlsx')}}">2019_02_14_DivPanelS_LRpostulation.xlsx</a></td>
+    </tr>
+    <tr>
+      <td>Winter</td>
+      <td>LR IT score</td>
+      <td>2019 </td>
+      <td>MDN, indoor</td>
+      <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/raw/2019_02_14_DivPanelW_LRpostulation.xlsx')}}">2019_02_14_DivPanelW_LRpostulation.xlsx</a></td>
+    </tr>
+    <tr>
+      <td>Winter</td>
+      <td>LR IT score</td>
+      <td>2021</td>
+      <td>MDN, indoor</td>
+      <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/raw/2021_10_13_DivPanelW_LRpostulation.xlsx')}}">2021_10_13_DivPanelW_LRpostulation.xlsx</a></td>
+    </tr>
+  </table>
+<p style = "font-size: 12px; font-weight: 500; padding-left: 130px;" >LR: leaf rust; FHB: Fusarium head blight; PM: powdery mildew;
+    TWK: thousand kernel weight; TSW: thousand seed weight.<br>
+    MDN: Morden, Manitoba; OTT: Ottawa, Ontario; SKT: Saskatoon, Saskatchewan,
+    PEI:  Prince Edward Island; LTB: Lethbridge, Alberta.
+  </p>
+
+<p style = "text-align: center;font-weight: 700;" >Processed phenotypic data files</p>
+<table id="Genome_size" class = "center">
+    <tr>
+      <th>Panel</th>
+        <th>No. of accessions</th>
+      <th>Traits</th>
+      <th>Year</th>
+      <th>Location</th>
+      <th>Data file download link</th>
+        <th> Reference</th>
+        <th>Basic statistics</th>
+    </tr>
+    <tr>
+      <td>Spring, Winter</td>
+        <td>213 (Spring), 164 (Winter)</td>
+      <td>LR severity BLUP estimates over years and locations</td>
+      <td>2016, 2017, 2018, 2019</td>
+      <td>OTT, SKT, MDN</td>
+      <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/processed/LR_severity_BLUP_scores_SpringP_and_WinterP_2016-2019.xlsx') }}">LR_severity_BLUP_scores_SpringP_and_WinterP_2016-2019.xlsx</a></td>
+        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7701059/">Fatima et al. (2020)</a> </td>
+        <td></td>
+    </tr>
+    <tr>
+       <td>Spring, Winter</td>
+        <td>213 (Spring), 164 (Winter)</td>
+       <td>LR severity Cobbs scores over years and locations</td>
+       <td>2016, 2017, 2018, 2019</td>
+      <td>OTT, SKT, MDN</td>
+       <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/processed/LR_severity_cobbs_scores_SpringP_and_WinterP_2016-2019.xlsx')}}">LR_severity_cobbs_scores_SpringP_and_WinterP_2016-2019.xlsx</a></td>
+        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7701059/">Fatima et al. (2020)</a> </td>
+        <td></td>
+    </tr>
+    <tr>
+       <td>Spring, Winter</td>
+        <td>360</td>
+       <td>LR IT scores converted to Stakman's linear scores (1-9)</td>
+       <td>2019, 2021</td>
+      <td>MDN</td>
+       <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/processed/LR_IT_scores_Stakman_and_linear_scale.xlsx')}}">LR_IT_scores_Stakman_and_linear_scale.xlsx</a></td>
+        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7701059/">Fatima et al. (2020)</a> </td>
+        <td></td>
+    </tr>
+    <tr>
+       <td>Spring, Winter</td>
+        <td>73 (Winter), 206 (Spring)</td>
+       <td>FHB BLUP estimates across 2016-2019 and three locations, including VRI, DON, Incidense, and severity</td>
+       <td>2016, 2017, 2018, 2019</td>
+      <td>OOT, MDN</td>
+       <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/pheno_data/processed/FHB_BLUP_estimates_over_2017-2019_Spring_Winter_panels.xlsx')}}">FHB_BLUP_estimates_over_2017-2019_Spring_Winter_panels.xlsx</a></td>
+        <td>Bartaula et al. (2023) </td>
+        <td><a class = "table-column-link", href="{{url_for('pdf_file_display', filename='data_files/pdf/FHB_trait_correlation.pdf')}}">Distribution and correlation</a></td>
+    </tr>
+</table>
+<p style = "font-size: 12px; font-weight: 500; padding-left: 130px;" >
+    LR: leaf rust; FHB: Fusarium head blight; VRI:visual rating index; DON: mycotoxin deoxynivalenol.<br>
+    MDN: Morden, Manitoba; OTT: Ottawa, Ontario; SKT: Saskatoon, Saskatchewan.
+  </p>
+
+
+
+
+
+
+<!--
+<p></p>
+<b>Reorganized data files</b>
+<p></p>
+<b>Summarized information</b>
+-->
+
+<span id = "GenomicData" class = "tier-title" style="width:100%;margin-bottom:20px;">Genomic Data</span>
+<p>SNP data of the  wheat diversity panel (385 accessions).</p>
+<p style = "text-align: center;font-weight: 700;" >SNP data files of 90K Chip Array for the 385 accessions in the diversity panel</p>
+<table id="Genome_size" class = "center">
+    <tr>
+      <th>Data file discription</th>
+        <th>No. of accessions</th>
+      <th>No. of SNPs</th>
+      <th>RefSeq version</th>
+      <th>File format</th>
+      <th>Data file download link</th>
+        <th>Analysis</th>
+    </tr>
+    <tr>
+      <td>Filtered and validated SNPs for validated and filter for the wheat diversity panel</td>
+        <td>385</td>
+      <td>20501</td>
+      <td></td>
+      <td>hmp</td>
+      <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/genomic_data/20501_SNPs_filtered_385_accessions.hmp.zip') }}">20501_SNPs_filtered_385_accessions.hmp.zip</a></td>
+        <td></td>
+    </tr>
+    <tr>
+       <td>SNPs mapped to Wheat RefSeq v1.1</td>
+        <td>385</td>
+       <td>12617</td>
+      <td>Wheat RefSeq 1.1</td>
+       <td>csv</td>
+       <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/genomic_data/mapped_12617_SNPs_385_accessions.zip')}}">mapped_12617_SNPs_385_accessions.zip</a></td>
+        <td>
+            <a class = "table-column-link", href="{{url_for('pdf_file_display', filename='data_files/images/383_accessions_phylogenetic_tree.jpg')}}">Pylogenetic analysis</a><br>
+            <a class = "table-column-link", href="{{url_for('pdf_file_display', filename='data_files/images/385_accessions_pca.jpg')}}">Principal component analysis</a><br>
+        </td>
+    </tr>
+    <tr>
+       <td>Info for mapping 90K SNPs to wheat RefSeq 1.1</td>
+        <td></td>
+       <td>43013</td>
+      <td>Wheat RefSeq 1.1</td>
+       <td>Excel</td>
+       <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/genomic_data/Mapping_of_43K_SNPs_on_CS_RefSeq_v.1.1.xlsx')}}">Mapping_of_43K_SNPs_on_CS_RefSeq_v.1.1.xlsx</a></td>
+        <td></td>
+    </tr>
+    <tr>
+       <td>SNPs mapped to Wheat RefSeq v2.1 for the FHB study</td>
+        <td>279</td>
+       <td>13760</td>
+      <td>Wheat RefSeq 2.1</td>
+       <td>vcf</td>
+       <td><a class = "table-column-link", href="{{url_for('static', filename='data_files/genomic_data/Wheat_279_genotypes_13760_SNPs.zip')}}">Wheat_279_genotypes_13760_SNPs.zip</a></td>
+        <td></td>
+    </tr>
+</table>
+
+</div>
+
+{% endblock %}

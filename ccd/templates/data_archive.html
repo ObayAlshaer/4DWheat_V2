@@ -44,8 +44,13 @@
 <a href="{{ url_for("login" , condition=1) }}" class="view-button">you can view it if you log in</a>
 {% endif %}
 -->
-              <li><h3><a class = "table-column-link"  href="{{ url_for('data_archive_385_panel') }}" target="_blank">Phenotypic and genomic data for the wheat diversity panel of 385 accessions</a></h3>
+              <li><h3><a class = "table-column-link"  href="{{ url_for('data_archive_385_panel') }}" target="_blank">Phenotypic and 90K SNP data for the wheat diversity panel of 385 accessions</a></h3>
               </li>
+              <li><h3><a class = "table-column-link"  href="{{ url_for('data_archive_141_panel') }}" target="_blank">Phenotypic and exome capture sequences based SNP data for the wheat diversity panel of 141 accessions
+                  </a></h3>
+              <li><h3><a class = "table-column-link"  href="{{ url_for('data_archive_328_panel') }}" target="_blank">Phenotypic and GBS based SNP data for the wheat diversity panel of 328 accessions
+                </a></h3>
+
           </ul>
 </div>
 {% endblock %}

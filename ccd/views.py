@@ -871,9 +871,17 @@ def Presentations_delete():
 def data_archive():
    return render_template('data_archive.html')
 
-@app.route('/data_archive_353_panel',methods=['GET','POST'])
+@app.route('/data_archive_385_panel',methods=['GET','POST'])
 def data_archive_385_panel():
    return render_template('data_archive_385_panel.html')
+
+@app.route('/data_archive_141_panel',methods=['GET','POST'])
+def data_archive_141_panel():
+   return render_template('data_archive_141_panel.html')
+
+@app.route('/data_archive_328_panel',methods=['GET','POST'])
+def data_archive_328_panel():
+   return render_template('data_archive_328_panel.html')
 
 @app.route('/download_file/<path:filename>', methods=['GET','POST'])
 def download_file(filename):
